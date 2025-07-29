@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-color: #2093bd;
+}
+
+html {
+    font-family: sans-serif, system-ui;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+}
+
+.display > div {
+    flex: 1;
+}
+
+.player {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.player .lifepoints {
+    flex: 2;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+.player .lifepoints-controls {
+    flex: 1;
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    background: var(--light-color);
+    border-left: 2px solid black;
+}
+
+.lifepoints-controls button {
+    flex-grow: 1;
+    font-size: 5rem;
+}
+
+.player1 {
+    border-bottom: 2px solid black;
+}
+
+.player2 {
+    border-bottom: 2px solid black;
+}
+
+.controls {
+    background: var(--light-color);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.controls .buttons {
+    flex: 2;
+}
+
+.controls .timer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    border-left: 2px solid black;
+    background: #ffffff;
+}
+
+.lifepoints {
+    background: white;
+}
