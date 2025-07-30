@@ -5,7 +5,68 @@ const p2Add = document.querySelector(".player2 .add");
 const p1Sub = document.querySelector(".player1 .subtract");
 const p2Sub = document.querySelector(".player2 .subtract");
 const display = document.querySelector(".display");
+const calcButtons = document.querySelector(".buttons");
+const calcDisplay = document.querySelector(".calc-display");
 
 display.addEventListener("click", (event) => {
-    
+    if (event.target.tagName !== "BUTTON") {
+    return;
+   }
+   switch (event.target.id) {
+    case "p1-add":
+        let currentLP = playerOneLP.textContent;
+        playerOneLP.textContent = Number(calcDisplay.textContent) + Number(currentLP);
+        break;
+    case "p1-sub":
+        break;
+    case "p2-add":
+        break;
+    case "p2-sub":
+        break;
+   }
+});
+
+calcButtons.addEventListener("click", (event) => {
+   if (event.target.tagName !== "BUTTON") {
+    return;
+   }
+   switch (event.target.id) {
+    case "0":
+        calcDisplay.textContent += "0";
+        break;
+    case "1":
+        calcDisplay.textContent += "1";
+        break;
+    case "2":
+        calcDisplay.textContent += "2";
+        break;
+    case "3":
+        calcDisplay.textContent += "3";
+        break;
+    case "4":
+        calcDisplay.textContent += "4";
+        break;
+    case "5":
+        calcDisplay.textContent += "5";
+        break;
+    case "6":
+        calcDisplay.textContent += "6";
+        break;
+    case "7":
+        calcDisplay.textContent += "7";
+        break;
+    case "8":
+        calcDisplay.textContent += "8";
+        break;
+    case "9":
+        calcDisplay.textContent += "9";
+        break;
+    case "X":
+        let text = calcDisplay.textContent;
+        calcDisplay.textContent = [...text].splice(0, text.length - 1).join("");
+        break;
+    case "C":
+        calcDisplay.textContent = "";
+        break;
+   }
 });
