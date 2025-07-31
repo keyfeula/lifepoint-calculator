@@ -5,7 +5,7 @@
 }
 
 :root {
-    --light-color: #b70014;
+    --light-color: #474747;
 }
 
 html {
@@ -51,7 +51,7 @@ body {
 }
 
 .lifepoints-controls button {
-    flex-grow: 1;
+    flex: 1;
     font-size: 5rem;
 }
 
@@ -102,5 +102,10 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 5rem;
-    grid-column: 3 / -1;
+    grid-column: 3 / -2;
+}
+
+button#new-game {
+    background: #b73333;
+    font-size: 2.5rem;
 }

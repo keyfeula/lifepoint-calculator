@@ -8,20 +8,29 @@ const display = document.querySelector(".display");
 const calcButtons = document.querySelector(".buttons");
 const calcDisplay = document.querySelector(".calc-display");
 
+let p1Lifepoints = 8000;
+let p2Lifepoints = 8000;
+
 display.addEventListener("click", (event) => {
     if (event.target.tagName !== "BUTTON") {
     return;
    }
    switch (event.target.id) {
     case "p1-add":
-        let currentLP = playerOneLP.textContent;
-        playerOneLP.textContent = Number(calcDisplay.textContent) + Number(currentLP);
+        p1Lifepoints = p1Lifepoints + Number(calcDisplay.textContent);
+        playerOneLP.textContent = p1Lifepoints;
         break;
     case "p1-sub":
+        p1Lifepoints = p1Lifepoints - Number(calcDisplay.textContent);
+        playerOneLP.textContent = p1Lifepoints;
         break;
     case "p2-add":
+        p2Lifepoints = p2Lifepoints + Number(calcDisplay.textContent);
+        playerTwoLP.textContent = p2Lifepoints;
         break;
     case "p2-sub":
+        p2Lifepoints = p2Lifepoints - Number(calcDisplay.textContent);
+        playerTwoLP.textContent = p2Lifepoints;
         break;
    }
 });
@@ -66,6 +75,13 @@ calcButtons.addEventListener("click", (event) => {
         calcDisplay.textContent = [...text].splice(0, text.length - 1).join("");
         break;
     case "C":
+        calcDisplay.textContent = "";
+        break;
+    case "new-game":
+        p1Lifepoints = 8000;
+        p2Lifepoints = 8000;
+        playerOneLP.textContent = p1Lifepoints;
+        playerTwoLP.textContent = p2Lifepoints;
         calcDisplay.textContent = "";
         break;
    }
