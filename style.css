@@ -5,7 +5,8 @@
 }
 
 :root {
-    --light-color: #474747;
+    --light-color: #ffffff;
+    --dark-color: #474747;
 }
 
 html {
@@ -15,7 +16,7 @@ html {
 body {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
 }
 
 .display {
@@ -44,8 +45,6 @@ body {
 .player .lifepoints-controls {
     flex: 1;
     display: flex;
-    padding: 1rem;
-    gap: 1rem;
     background: var(--light-color);
     border-left: 2px solid black;
 }
@@ -103,9 +102,10 @@ body {
     align-items: center;
     font-size: 5rem;
     grid-column: 3 / -2;
+    border: 2px solid black;
 }
 
 button#new-game {
-    background: #b73333;
+    background: #cf3535;
     font-size: 2.5rem;
 }

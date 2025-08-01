@@ -39,36 +39,58 @@ calcButtons.addEventListener("click", (event) => {
    if (event.target.tagName !== "BUTTON") {
     return;
    }
-   switch (event.target.id) {
+
+   const id = event.target.id;
+   switch (id) {
     case "0":
-        calcDisplay.textContent += "0";
+        if (calcDisplay.textContent.length < 5) {
+            calcDisplay.textContent += "0";
+        }
         break;
     case "1":
-        calcDisplay.textContent += "1";
+        if (calcDisplay.textContent.length < 5) {
+            calcDisplay.textContent += "1";
+        }
         break;
     case "2":
-        calcDisplay.textContent += "2";
+        if (calcDisplay.textContent.length < 5) {
+            calcDisplay.textContent += "2";
+        }
         break;
     case "3":
-        calcDisplay.textContent += "3";
+        if (calcDisplay.textContent.length < 5) {
+            calcDisplay.textContent += "3";
+        }
         break;
     case "4":
-        calcDisplay.textContent += "4";
+        if (calcDisplay.textContent.length < 5) {
+            calcDisplay.textContent += "4";
+        }
         break;
     case "5":
-        calcDisplay.textContent += "5";
+        if (calcDisplay.textContent.length < 5) {
+            calcDisplay.textContent += "5";
+        }
         break;
     case "6":
-        calcDisplay.textContent += "6";
+        if (calcDisplay.textContent.length < 5) {
+            calcDisplay.textContent += "6";
+        }
         break;
     case "7":
-        calcDisplay.textContent += "7";
+        if (calcDisplay.textContent.length < 5) {
+            calcDisplay.textContent += "7";
+        }
         break;
     case "8":
-        calcDisplay.textContent += "8";
+        if (calcDisplay.textContent.length < 5) {
+            calcDisplay.textContent += "8";
+        }
         break;
     case "9":
-        calcDisplay.textContent += "9";
+        if (calcDisplay.textContent.length < 5) {
+            calcDisplay.textContent += "9";
+        }
         break;
     case "X":
         let text = calcDisplay.textContent;
