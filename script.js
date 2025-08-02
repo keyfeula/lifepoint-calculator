@@ -7,9 +7,19 @@ const p2Sub = document.querySelector(".player2 .subtract");
 const display = document.querySelector(".display");
 const calcButtons = document.querySelector(".buttons");
 const calcDisplay = document.querySelector(".calc-display");
+const timer = document.querySelector(".timer");
 
 let p1Lifepoints = 8000;
 let p2Lifepoints = 8000;
+let time = 2700;
+
+setInterval(() => {
+    if (time <= 0) {
+        return;
+    }
+    time -= 1;
+    timer.textContent = time;
+}, 1000);
 
 display.addEventListener("click", (event) => {
     if (event.target.tagName !== "BUTTON") {
@@ -105,6 +115,8 @@ calcButtons.addEventListener("click", (event) => {
         playerOneLP.textContent = p1Lifepoints;
         playerTwoLP.textContent = p2Lifepoints;
         calcDisplay.textContent = "";
+        time = 2700;
+        timer.textContent = time;
         break;
    }
 });
