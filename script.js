@@ -121,7 +121,7 @@ calcButtons.addEventListener("click", (event) => {
         playerTwoLP.textContent = p2Lifepoints;
         calcDisplay.textContent = "";
         time = 2700;
-        timer.textContent = time;
+        timer.textContent = "45:00";
         break;
    }
 });

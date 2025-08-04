@@ -5,8 +5,19 @@
 }
 
 :root {
-    --light-color: #ffffff;
+    --light-color: #f2f2f2;
     --dark-color: #474747;
+    --button-color: #ebebeb;
+    --hover-button-color: #bfbfbf;
+    --border-color: #292929;
+}
+
+button {
+    border: 2px solid var(--dark-color);
+}
+
+button:hover {
+    background: var(--hover-button-color);
 }
 
 html {
@@ -40,13 +51,14 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 5rem;
+    border-left: 2px solid var(--border-color);
+    border-top: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
 }
 
 .player .lifepoints-controls {
     flex: 1;
     display: flex;
-    background: var(--light-color);
-    border-left: 2px solid black;
 }
 
 .lifepoints-controls button {
@@ -54,18 +66,11 @@ body {
     font-size: 5rem;
 }
 
-.player1 {
-    border-bottom: 2px solid black;
-}
-
-.player2 {
-    border-bottom: 2px solid black;
-}
-
 .controls {
     background: var(--light-color);
     display: grid;
     grid-template-columns: 2fr 1fr;
+    border: 2px solid var(--border-color);
 }
 
 .controls .buttons {
@@ -73,6 +78,7 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    border-right: 2px solid var(--border-color);
 }
 
 .controls .timer {
@@ -81,12 +87,11 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 5rem;
-    border-left: 2px solid black;
-    background: #ffffff;
+    background: var(--light-color);
 }
 
 .lifepoints {
-    background: white;
+    background: var(--light-color);
 }
 
 .buttons button {
@@ -99,10 +104,14 @@ body {
     align-items: center;
     font-size: 5rem;
     grid-column: 3 / -2;
-    border: 2px solid black;
+    border: 2px solid var(--border-color);
 }
 
 button#new-game {
     background: #cf3535;
     font-size: 2.5rem;
+}
+
+button#new-game:hover {
+    background: #a52828;
 }
