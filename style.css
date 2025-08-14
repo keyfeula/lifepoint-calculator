@@ -22,10 +22,11 @@ button:hover {
 
 html {
     font-family: sans-serif, system-ui;
+    height: 100%;
 }
 
 body {
-    min-height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-rows: 1fr 1.5fr;
 }
