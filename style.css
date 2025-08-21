@@ -41,13 +41,11 @@ body {
 }
 
 .player {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
 }
 
 .player .lifepoints {
     flex: 2;
-    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,31 +62,25 @@ body {
 
 .lifepoints-controls button {
     flex: 1;
+    font-size: 4rem;
+    padding: 1rem;
+}
+
+.lifepoints-controls .subtract {
     font-size: 5rem;
 }
 
 .controls {
     background: var(--light-color);
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
     border: 2px solid var(--border-color);
 }
 
 .controls .buttons {
-    flex: 2;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    border-right: 2px solid var(--border-color);
-}
-
-.controls .timer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
-    background: var(--light-color);
 }
 
 .lifepoints {
@@ -96,21 +88,22 @@ body {
 }
 
 .buttons button {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .buttons .calc-display {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
-    grid-column: 3 / -2;
+    grid-column: 1 / 3;
+    font-size: 4rem;
     border: 2px solid var(--border-color);
 }
 
 button#new-game {
     background: #cf3535;
     font-size: 2.5rem;
+    grid-column: 3 / 5;
 }
 
 button#new-game:hover {
