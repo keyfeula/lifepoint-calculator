@@ -24,7 +24,7 @@ button:hover {
 }
 
 html {
-    font-family: sans-serif, system-ui;
+    font-family: system-ui, sans-serif;
     height: 100%;
 }
 
